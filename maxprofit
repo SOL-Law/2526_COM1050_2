@@ -1,17 +1,16 @@
-lass Solution:
+class Solution:
     def maxProfit(self, prices):
-        min_price = prices[0]
-        max_profit = 0
+        gia_nho_nhat=prices[0]
+        gia_lon_nhat_thu_dc =0
+        for gia in prices:
+            if gia<gia_nho_nhat:
+                gia_nho_nhat=gia
+            gia_tam_thoi_lon_nhat=gia-gia_nho_nhat
+            if  gia_tam_thoi_lon_nhat>gia_lon_nhat_thu_dc :
+                 gia_lon_nhat_thu_dc =gia_tam_thoi_lon_nhat
+        return gia_lon_nhat_thu_dc
 
-        for price in prices:
 
-            if price < min_price:
-                min_price = price
+        
 
-            current_profit = price - min_price
-
-            if current_profit > max_profit:
-                max_profit = current_profit
-            
-        return max_profit
         
