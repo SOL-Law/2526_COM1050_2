@@ -1,0 +1,8 @@
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        a=[]
+        n=max(candies)         
+        for i in range(0,len(candies)):
+            a.append(candies[i]+extraCandies>=n)
+        return a
+        
