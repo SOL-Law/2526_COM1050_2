@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution(object):    # cách 1
     def isPalindrome(self, x):
 	if x<0:
 		return False
@@ -10,3 +10,13 @@ class Solution(object):
 		x = x//10
 	return newNum == inputNum
         
+class Solution(object):    # cách 2
+    def isPalindrome(self, x):
+        if x<0:
+            return False
+        a=list(str(x))
+        b=len(a)
+        for i in range(b//2):
+            if a[i]!=a[-1-i]:
+                return False
+        return True
