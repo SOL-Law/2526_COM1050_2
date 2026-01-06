@@ -1,0 +1,10 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        a="abcdefghijklmnopqrstuvwxyz"
+        b="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        d="0123456789"
+        c=""
+        for i in s:
+            if i in a or i in b or i in d:
+                c+=i.lower()
+        return c==c[::-1]
