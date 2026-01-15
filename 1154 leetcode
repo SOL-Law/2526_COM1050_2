@@ -1,0 +1,14 @@
+class Solution:
+    def dayOfYear(self, date: str) -> int:
+        year,month,day=date.split("-")      # bỏ dấu đi để ép biến
+        cnt=[31,28,31,30,31,30,31,31,30,31,30,31] # số ngày trong từng tháng 
+        year=int(year)
+        month=int(month)   # ép về số nguyên để tính toán 
+        day=int(day)
+        nam_nhuan=(year%400==0) or (year%4==0 and year%100!=0)  # check năm nhuận
+        if nam_nhuan:
+            cnt[1]=cnt[1]+1  # nếu năm nhuận thì tháng 2 29 ngày
+        a=0  # tạo biến tính tổng ngày từ tháng 1 đến tháng month
+        for i in range(month-1): # vì chạy từ 0
+            a=a+cnt[i] # tính tổng ngày các tháng 
+        return a+day # tổng ngày các tháng + số ngày trong date
