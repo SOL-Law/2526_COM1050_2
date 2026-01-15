@@ -1,0 +1,10 @@
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        a=len(heights) # độ dài của đầu vào
+        b=heights.copy() # tạo 1 bản sao 
+        b.sort()  # sắp xếp thep thứ tự tăng dần
+        c=0
+        for i in range(a): # kiểm tra từng vị trí trong đầu vào
+            if heights[i]!=b[i]:
+                c+=1   # nếu nó sai chỗ thì đếm vào
+        return c   
