@@ -1,0 +1,6 @@
+class Solution:
+    def largestOddNumber(self, num: str) -> str:
+        for i in range(len(num)-1,-1,-1): #chạy ngược từ trái qua phải 
+            if int(num[i])%2!=0:   # đổi thành số nguyên nếu kiểm tra chẵn lẻ
+                return num[:i+1]   # vị trí i lẻ ở đâu thì in từ đầu đến vị trị i
+        return ""  # nếu k tìm đc thì in ra ""
