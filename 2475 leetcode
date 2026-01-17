@@ -1,0 +1,9 @@
+class Solution:
+    def unequalTriplets(self, nums: List[int]) -> int:
+        d=0
+        for a in range(len(nums)): # duyệt cho a <b < c:
+            for b in range(a+1,len(nums)):
+                for c in range(b+1,len(nums)):
+                    if nums[a]!=nums[b] and nums[a]!=nums[c] and nums[b]!=nums[c]: # duyệt cho 3 cặp số trên khác nhau là đc
+                        d+=1
+        return d
