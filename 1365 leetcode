@@ -1,0 +1,10 @@
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+       b=[] # tạo 1 list để đếm số phần tử nhỏ hơn nums[i]
+       for i in range(len(nums)):
+        a=0 # đặt ở đây để có thể reset lại sau mỗi lần qua biến i mới
+        for j in range(len(nums)):
+            if nums[j]<nums[i]:
+                a+=1
+        b.append(a) # chỉ append sau khi chạy hết j 
+       return b
