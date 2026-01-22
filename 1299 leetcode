@@ -1,0 +1,12 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        a=len(arr)
+        max_value=-1 # giá trị cuối đề cho là -1
+        for i in range(a-1,-1,-1):# chạy ngc từ phải qua
+            b=arr[i] # ép giá trị
+            arr[i]=max_value # ban đầu số cuối -1 nên ép vào
+            if b>max_value: # chạy lần lượt từ cuối lên tìm max
+                max_value=b # ép vào 
+        return arr
+
+           
