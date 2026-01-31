@@ -1,0 +1,5 @@
+class Solution(object):
+    def countElements(self, nums):
+        mn = min(nums)
+        mx = max(nums)
+        cnt = 0
