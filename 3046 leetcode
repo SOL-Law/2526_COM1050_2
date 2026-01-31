@@ -1,0 +1,14 @@
+class Solution(object):
+    def isPossibleToSplit(self, nums):
+        count = {}
+
+        for x in nums:
+            if x not in count:
+                count[x] = 1
+            else:
+                count[x] += 1
+
+            if count[x] > 2:
+                return False
+
+        return True
