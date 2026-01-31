@@ -1,0 +1,13 @@
+class Solution(object):
+    def canBeIncreasing(self, nums):
+        for i in range(len(nums)):
+            temp = nums[:i] + nums[i+1:]
+            if self.isIncreasing(temp):
+                return True
+        return False
+
+    def isIncreasing(self, arr):
+        for i in range(len(arr) - 1):
+            if arr[i] >= arr[i + 1]:
+                return False
+        return True
