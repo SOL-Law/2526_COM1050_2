@@ -1,0 +1,12 @@
+class Solution(object):
+    def sortArrayByParity(self, nums):
+        chan = []
+        le = []
+
+        for x in nums:
+            if x % 2 == 0:
+                chan.append(x)
+            else:
+                le.append(x)
+
+        return chan + le
